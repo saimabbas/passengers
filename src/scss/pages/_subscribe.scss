@@ -1,0 +1,56 @@
+.subscribepage {
+  width: 100%;
+  .subimgbox {
+    width: 100%;
+    .subscribe-bg-light {
+      width: 100%;
+      height: 105vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: bottom;
+      z-index: 1;
+    }
+    .subscribe-bg-dark {
+      width: 100%;
+      height: 105vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: top;
+      z-index: 1;
+    }
+  }
+}
+.subscribe-content.subsmainpage {
+  margin: 22.5rem 0 15rem 0;
+  .section-heading {
+    p {
+      margin: 2.5rem 0 7.5rem 0;
+      z-index: 10;
+    }
+  }
+  .subscribe-grid-card {
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .subscribe-content.subsmainpage {
+    margin: 20rem 0 15rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .subscribe-content.subsmainpage {
+    margin: 15rem 0;
+  }
+  .subscribe-content.subsmainpage .section-heading p {
+    margin: 2.5rem 0 6rem 0;
+    z-index: 10;
+    width: 100%;
+  }
+}

@@ -1,0 +1,75 @@
+.section-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .sh-heading {
+    width: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 4.5rem;
+      line-height: 5rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 10;
+      color: var(--dark-blue-white);
+      text-align: center;
+    }
+
+    img {
+      width: 8rem;
+      position: absolute;
+      top: -2rem;
+      right: -1.5rem;
+      z-index: 9;
+    }
+  }
+
+  p {
+    font-size: 1.85rem;
+    color: var(--user-details-p);
+    text-align: center;
+    line-height: 2.5rem;
+    margin: 2.5rem 0 0 0;
+    width: 75%;
+  }
+
+  h6 {
+    margin: 0.5rem 0 0 0;
+    z-index: 10;
+    font-size: 3.5rem;
+    color: var(--dark-blue-white);
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section-heading p {
+    width: 100%;
+  }
+
+  .section-heading .sh-heading h2 {
+    font-size: 2.75rem;
+  }
+
+  .section-heading p {
+    font-size: 1.75rem;
+  }
+
+  .section-heading h6 {
+    font-size: 2.5rem;
+  }
+
+  .section-heading .sh-heading img {
+    width: 6.5rem;
+    position: absolute;
+    top: -1rem;
+    right: -2rem;
+    z-index: 9;
+  }
+}

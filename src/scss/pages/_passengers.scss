@@ -1,0 +1,361 @@
+.passengerpage {
+  width: 100%;
+  padding: 5rem;
+  background-color: #000000;
+  .passengermain {
+    width: 100%;
+    position: relative;
+    background-color: #243f71;
+    .passengersheaderhero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background-color: #243f71;
+      .passengerheader {
+        width: 100%;
+        height: 12.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4rem;
+        .passengerheaderleft {
+          width: 75%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          svg {
+            height: 2.5rem;
+            object-fit: contain;
+          }
+          ul {
+            display: inline-flex;
+            margin: 0 0 0 7.5rem;
+            overflow: hidden;
+            li {
+              list-style: none;
+              width: max-content;
+              margin: 0 5rem 0 0;
+              &:hover {
+                color: #01fbc2;
+              }
+              a {
+                text-decoration: none;
+                font-size: 1.75rem;
+                color: #fff;
+                cursor: pointer;
+                &:hover {
+                  color: #01fbc2;
+                }
+                b {
+                  font-size: 2rem;
+                  transition: 0.25s;
+                }
+              }
+            }
+          }
+        }
+        .passengerheaderright {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 25%;
+          .volumeicons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 1000px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 20%;
+            height: 3.5rem;
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 50%;
+              border-radius: 50%;
+              background-color: transparent;
+              border: none;
+              height: 100%;
+              svg {
+                width: 100%;
+              }
+            }
+            button:hover {
+              background-color: #fff;
+            }
+          }
+          .passengerscomingsoon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: 1.5rem 0;
+            color: #fff;
+            background: linear-gradient(
+              180deg,
+              rgba(255, 255, 255, 0.08) 0%,
+              rgba(255, 255, 255, 0.2) 100%
+            );
+            border: unset;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin: 0 0 0 2rem;
+          }
+        }
+      }
+      .passengershero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 22.5rem 0 0 0;
+        h3 {
+          font-size: 10.5rem;
+          color: #fff;
+          font-weight: 500;
+          letter-spacing: 8px;
+          text-transform: uppercase;
+        }
+        .passengersicons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25%;
+          margin: 2rem 0 0 0;
+          .pibox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            max-width: 4rem;
+            max-height: 4rem;
+            min-width: 4rem;
+            min-height: 4rem;
+            border-radius: 50%;
+            margin: 0 0 0 1rem;
+            cursor: pointer;
+            svg {
+              max-width: 1.75rem;
+              color: #fff;
+            }
+          }
+          .pibox:hover {
+            background: #fff;
+          }
+        }
+      }
+    }
+    .passengersswiper {
+      background-color: #243f71;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10rem 0 0 0;
+      p {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .passengersmainswiper {
+        width: 100%;
+        height: 100%;
+        margin: 3rem 0;
+        .passengerslide {
+          width: 100%;
+          height: 100%;
+          img {
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+    .passengersteam {
+      background-color: #243f71;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+      padding: 10rem 0 0 0;
+      h6 {
+        font-size: 1.85rem;
+        color: #01fbc2;
+        font-weight: 400;
+      }
+      h5 {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .passengersteamgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3rem 7rem;
+        margin: 3rem 0;
+        width: 85%;
+        .ptgmainbox {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          img {
+            width: 20.5rem;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 1rem;
+          }
+          p {
+            font-size: 1.55rem;
+            color: #fff;
+            font-weight: 500;
+            margin: 2rem 0 0 0;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .passengersfaq {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #243f71;
+      width: 100%;
+      padding: 10rem 0 0 0;
+      p {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0 0 3rem 0;
+      }
+      .pfaqbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        flex-direction: column;
+        .firstpassfaq {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          flex-direction: column;
+          .fpfquest {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 4rem;
+            background: #09062c;
+            transform: skew(-20deg, 0deg);
+            margin: 0 0 2rem 0;
+            border-bottom: 0.5px solid #fff;
+            .fpfqleft {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              width: 70%;
+              span {
+                color: #fff;
+                font-weight: 500;
+                font-size: 2.5rem;
+                margin: 0 6rem 0 0;
+              }
+              p {
+                font-size: 1.85rem;
+                color: #fff;
+                font-weight: 400;
+                text-transform: uppercase;
+                margin: 0 !important;
+              }
+            }
+            .fpfqright {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              svg {
+                color: #fff;
+                font-size: 4rem;
+              }
+            }
+          }
+          .fpfans {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 4rem;
+            background: #09062c;
+            transform: skew(-15deg, 0deg);
+            margin: 0 0 2rem 0;
+            h6 {
+              font-size: 1.6rem;
+              font-weight: 300;
+              color: #fff;
+              text-transform: normal;
+            }
+          }
+        }
+      }
+    }
+    .passengersaboutus {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10rem 0;
+      h6 {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0 0 3rem 0;
+      }
+      p {
+        font-size: 1.85rem;
+        color: #fff;
+        font-weight: 300;
+        text-transform: normal;
+        margin: 0 0 3rem 0;
+        width: 100%;
+        text-align: center;
+        line-height: 44px;
+      }
+      .passaboutusbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1.5rem 2.75rem;
+          border: 2px solid #fff;
+          font-size: 1.65rem;
+          color: #fff;
+          font-weight: 400;
+          text-transform: uppercase;
+          border-radius: 3rem 0;
+          background-color: transparent;
+          margin: 0 3rem 0 0;
+          svg {
+            width: 2.5rem;
+            margin: 0 1rem 0 0;
+          }
+        }
+      }
+    }
+  }
+}

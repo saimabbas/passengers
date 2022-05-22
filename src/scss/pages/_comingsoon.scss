@@ -1,0 +1,320 @@
+.comingsoon-moon {
+  width: 35rem;
+  height: max-content;
+  object-fit: contain;
+  position: absolute;
+  top: -2.5rem;
+  right: -5rem;
+  z-index: 80;
+}
+.comingsoon-cloud-1 {
+  position: absolute;
+  top: 20%;
+  // left: 50%;
+  z-index: 99;
+  width: 10rem;
+}
+.comingsoon-cloud-2 {
+  position: absolute;
+  top: 60%;
+  // left: 10%;
+  z-index: 99;
+  width: 10rem;
+}
+.comingsoon-cloud-3 {
+  position: absolute;
+  top: 50%;
+  // left: 90%;
+  z-index: 99;
+  width: 7.5rem;
+}
+.comingsoon-header {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  padding: 7.5rem 0 12.5rem 7.5rem;
+  svg {
+    width: 5rem;
+    height: max-content;
+    object-fit: contain;
+  }
+}
+.comingsoon-dark-header {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  img {
+    width: max-content;
+    height: 1.5rem;
+  }
+}
+.comesoonpage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .hr-bg-dark,
+  .hr-bg-light {
+    height: 100%;
+    min-height: 100vh;
+  }
+}
+.comesoonsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 199;
+  position: relative;
+  padding: 0 2.5rem;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  .section-heading {
+    .sh-heading {
+      h2 {
+        letter-spacing: 8px;
+        font-size: 8rem;
+      }
+      img {
+        width: 12.5rem;
+        position: absolute;
+        top: -4.5rem;
+        right: -3.5rem;
+        z-index: 9;
+      }
+    }
+    p {
+      margin: 3.5rem 0 0 0;
+      z-index: 10;
+      font-size: 2.25rem;
+    }
+  }
+}
+.coomsoontimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .hero-countdopwn-box {
+    width: 100%;
+    margin: 5.5rem 0 0 0;
+  }
+  .hero-countdopwn-box > h6 {
+    font-size: 1.65rem;
+    color: #1f194d;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+  }
+  .hero-countdown {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .hero-countdown > * {
+    margin: 0 0 2.5rem 0;
+  }
+  .hc-time-box {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 2.5rem 0 0;
+  }
+  .hc-time-box-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--var-timer-bg);
+    color: #fff;
+    //   padding: 0.75rem 1.5rem;
+    height: 9.5rem;
+    width: 8.5rem;
+    border-radius: 1rem;
+    span {
+      font-size: 3.5rem;
+      font-weight: 700;
+      display: block;
+    }
+    h6 {
+      color: var(--user-details-p);
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+  }
+}
+.coomsoonlast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
+  p {
+    color: #69697c;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin: 0 0 4rem 0;
+  }
+  .coomsooninput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min-content;
+    border-radius: 4rem;
+    padding: 1rem;
+    background-color: var(--var-input-bgc);
+    border: 1px solid var(--var-input-bor);
+    input {
+      // width: 27.5rem;
+      width: 0;
+      overflow: hidden;
+      border: unset;
+      font-size: 1.6rem;
+      color: #69697c;
+      font-weight: 400;
+      background-color: transparent;
+      padding: 0;
+    }
+    input:focus {
+      outline: none;
+    }
+    input::placeholder {
+      font-size: 1.6rem;
+      color: #69697c;
+      font-weight: 400;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 15rem;
+      max-width: 15rem;
+      border-radius: 4rem;
+      color: #fff;
+      background-color: #195bff;
+      font-size: 1.4rem;
+      font-weight: 500;
+      border: unset;
+      padding: 1.65rem 0;
+    }
+  }
+}
+.coomsoonicons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem 0 0 0;
+  a {
+    margin: 0 0.75rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .comingsoon-header {
+    padding: 5rem 0 10rem 5rem;
+  }
+  .comingsoon-moon {
+    width: 27.5rem;
+  }
+  .comesoonsection .section-heading .sh-heading h2 {
+    font-size: 6.5rem;
+  }
+  .comesoonsection .section-heading .sh-heading img {
+    width: 10rem;
+    top: -2.5rem;
+    right: -2.5rem;
+  }
+  .comesoonsection .section-heading p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comingsoon-header {
+    padding: 3.5rem 0 12.5rem 2.5rem;
+    svg {
+      width: 4rem;
+    }
+  }
+  .comingsoon-moon {
+    width: 22.5rem;
+    top: -7.5rem;
+    right: -10rem;
+  }
+  .comesoonsection .section-heading .sh-heading h2 {
+    font-size: 4.5rem;
+    letter-spacing: 3.5px;
+  }
+
+  .comesoonsection .section-heading .sh-heading img {
+    width: 8.5rem;
+    top: -2.5rem;
+    right: -2.5rem;
+  }
+  .comesoonsection .section-heading p {
+    font-size: 1.75rem;
+  }
+  .coomsoonlast .coomsooninput button {
+    min-width: 12.5rem;
+    max-width: 12.5rem;
+    padding: 1.25rem 2.5rem;
+  }
+  .coomsoonicons {
+    margin: 6.5rem 0 0 0;
+  }
+  .comingsoon-cloud-1 {
+    top: 7.5%;
+    width: 6.5rem;
+  }
+  .comingsoon-cloud-2 {
+    top: 25%;
+    left: 5%;
+    width: 6.5rem;
+  }
+  .comingsoon-cloud-3 {
+    top: 17%;
+    left: 90%;
+    width: 5rem;
+  }
+  .landing-content.comesoonsection {
+    padding: 20rem 0 0 0 !important;
+    margin: 0 !important;
+  }
+  .coomsoontimer .hero-countdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+  }
+  .coomsoontimer .hc-time-box {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .coomsoontimer .hc-time-box-top span {
+    font-size: 2.75rem;
+  }
+  header .header-content.cslmainheader {
+    align-items: flex-start;
+  }
+  .coomsoontimer .hc-time-box {
+    margin: 0 1.5rem 0 0;
+  }
+  .coomsoontimer .hc-time-box-top {
+    height: 9.5rem;
+    width: 7.5rem;
+    border-radius: 0.75rem;
+  }
+  .hc-time-box.hcnmar {
+    margin: 0;
+  }
+  .coomsoonlast {
+    margin: 5rem 0 0 0;
+    width: 100%;
+  }
+  .coomsoonlast .coomsooninput {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,489 @@
+.checkoutmainpage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6rem 4rem;
+  background-color: var(--round-chevron-box);
+  border-radius: 0.75rem;
+  z-index: 10;
+  margin: 5rem 0 0 0;
+  box-shadow: 0 7.5px 20px 0 rgba(0, 0, 0, 0.1);
+
+  .checkoutleft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 10;
+    width: 70%;
+    padding: 2rem 4rem 0 0;
+    border-right: 1px solid var(--user-details-border);
+
+    h4 {
+      font-size: 2.4rem;
+      color: var(--dark-blue-white);
+      font-weight: 700;
+    }
+
+    .coleftimg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      z-index: 10;
+      flex-direction: column;
+
+      p {
+        font-size: 2rem;
+        color: var(--dark-blue-white);
+        font-weight: 400;
+        margin: 6rem 0;
+        width: 55%;
+        text-align: center;
+      }
+
+      img {
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+      }
+    }
+
+    .colwallet {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 6rem 0 0 0;
+
+      h5 {
+        font-size: 2rem;
+        color: var(--dark-blue-white);
+        font-weight: 700;
+      }
+
+      p {
+        color: var(--user-details-p);
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 1rem 0 4rem 0;
+      }
+
+      .colwalbtn {
+        border: 1px solid var(--user-details-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem 1rem 2rem;
+        border-radius: 0.75rem;
+        width: 100%;
+
+        .colwalp {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 70%;
+
+          img {
+            width: 2.75rem;
+            height: 2.75rem;
+            object-fit: contain;
+          }
+
+          p {
+            color: var(--dark-blue-white);
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0 0 0 1.5rem;
+          }
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20%;
+          padding: 1rem 0;
+          color: #fff;
+          border-radius: 0.75rem;
+          border: unset;
+          background-color: #195bff;
+          font-size: 2rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .checkoutright {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 26%;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    z-index: 10;
+
+    h4 {
+      font-size: 2.4rem;
+      color: var(--dark-blue-white);
+      font-weight: 700;
+    }
+
+    .sumimgtext {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 6rem 0 0 0;
+
+      img {
+        width: 35%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .sumtext {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        h6 {
+          font-size: 1.75rem;
+          color: var(--dark-blue-white);
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 1.75rem;
+          color: var(--user-details-p);
+          font-weight: 500;
+          margin: 0.5rem 0 2.5rem 0;
+        }
+
+        span {
+          font-size: 1.75rem;
+          color: #195bff;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .checkouttotal {
+      margin: 4rem 0 2rem 0;
+      border-radius: 1rem;
+      background-color: var(--checkout-card-bg);
+      width: 100%;
+
+      .cotinner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 2rem 0 2rem;
+
+        p {
+          font-size: 1.7rem;
+          color: var(--user-details-p);
+          font-weight: 500;
+        }
+
+        h6 {
+          font-size: 1.7rem;
+          color: var(--dark-blue-white);
+          font-weight: 600;
+        }
+      }
+
+      .cottotal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 2rem 2rem 2rem;
+
+        p {
+          font-size: 2rem;
+          color: #2bd182;
+          font-weight: 700;
+        }
+
+        h6 {
+          font-size: 2rem;
+          color: var(--dark-blue-white);
+          font-weight: 700;
+        }
+      }
+    }
+
+    .cosub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 1rem;
+      background-color: var(--checkout-card-bg);
+      padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+      width: 100%;
+
+      input {
+        font-size: 1.4rem;
+        color: var(--dark-blue-white);
+        font-weight: 400;
+        width: 50%;
+        border: unset;
+        background-color: unset;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        font-size: 1.4rem;
+        color: var(--user-details-p);
+        font-weight: 400;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        padding: 1rem 0;
+        color: #fff;
+        border-radius: 1rem;
+        border: unset;
+        background-color: #195bff;
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.choty-choty-box {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  div {
+    width: calc(100%);
+    border-top: 1px dashed #bec4d7;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  span {
+    min-width: 3rem;
+    min-height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--round-chevron-box);
+    position: relative;
+    z-index: 10;
+  }
+
+  span:nth-child(1) {
+    transform: translate(-50%, 0);
+  }
+
+  span:nth-child(3) {
+    transform: translate(50%, 0);
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .checkoutmainpage {
+    padding: 4rem 2rem;
+  }
+
+  .checkoutmainpage .checkoutleft .coleftimg p {
+    width: 70%;
+  }
+
+  .checkoutmainpage .checkoutleft {
+    width: 65%;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn .colwalp p {
+    font-size: 1.6rem;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn button {
+    width: 23%;
+  }
+
+  .checkoutmainpage .checkoutright {
+    width: 32%;
+  }
+}
+
+.checkoutright-mob {
+  display: none;
+  width: 100%;
+
+  .accordion {
+    width: 100%;
+  }
+
+  .checkout-mob-acc-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    svg {
+      width: 1.25rem;
+      height: max-content;
+      transform: rotate(180deg);
+      transition: 0.5s;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .checkoutright-pc {
+    display: none;
+  }
+
+  .checkoutright-mob {
+    display: block;
+  }
+
+  .checkoutmainpage {
+    flex-direction: column-reverse;
+  }
+
+  .checkoutmainpage .checkoutleft {
+    width: 100%;
+    border: unset;
+    padding: 4rem 2rem;
+    background-color: var(--round-chevron-box);
+    border-radius: 0.75rem;
+    z-index: 10;
+    margin: 5rem 0 0 0;
+    box-shadow: 0 7.5px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .checkoutmainpage .checkoutright {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--round-chevron-box);
+    border-radius: 0.75rem;
+    z-index: 10;
+    margin: 5rem 0 0 0;
+    box-shadow: 0 7.5px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .checkoutmainpage .checkoutright .cosub button {
+    padding: 1.5rem 0;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn .colwalp p {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .checkoutmainpage {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    background-color: unset;
+    border-radius: 0;
+    z-index: 10;
+    margin: 0;
+    box-shadow: unset;
+  }
+
+  .checkoutmainpage .checkoutright .sumimgtext {
+    margin: 3rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .checkoutmainpage .checkoutleft .coleftimg p {
+    width: 100%;
+    margin: 4rem 0;
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+  .checkoutmainpage .checkoutleft .colwallet {
+    margin: 4rem 0 0 0;
+  }
+  .checkoutmainpage .checkoutleft .colwallet h5 {
+    font-size: 1.8rem;
+  }
+  .checkoutmainpage .checkoutleft .colwallet p {
+    font-weight: 500;
+    margin: 0.5rem 0 2rem 0;
+    font-size: 1.45rem;
+  }
+
+  .checkoutmainpage .checkoutright {
+    padding: 2rem;
+  }
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn {
+    flex-direction: column;
+    border: unset;
+  }
+  .checkoutmainpage .checkoutright .sumimgtext .sumtext h6 {
+    margin: 0 0 0.5rem 0;
+  }
+  .checkoutmainpage .checkoutright .checkouttotal .cotinner h6 {
+    font-weight: 700;
+  }
+  .checkoutmainpage .checkoutright .checkouttotal .cottotal h6 {
+    font-weight: 800;
+  }
+  .checkoutmainpage .checkoutright .cosub button {
+    padding: 1.25rem 0;
+  }
+  .checkoutmainpage .checkoutleft {
+    margin: 3rem 0 0 0;
+    padding: 2rem;
+  }
+  .checkoutmainpage .checkoutright h4 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .checkoutmainpage .checkoutleft h4 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn .colwalp {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn {
+    padding: 0;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn .colwalp p {
+    font-size: 1.75rem;
+    margin: 0.25rem 0 0 1.5rem;
+  }
+
+  .checkoutmainpage .checkoutleft .colwallet .colwalbtn button {
+    width: 100%;
+    margin: 4rem 0 2rem 0;
+    border-radius: 1000px;
+    padding: 1.75rem 0;
+  }
+  .letushelp-content.hiwsection.page-body-con.checkout-nm {
+    margin: 15rem 0 5rem 0;
+  }
+}

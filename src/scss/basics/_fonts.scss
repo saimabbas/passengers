@@ -1,0 +1,18 @@
+@font-face {
+  font-family: conthrax;
+  src: local(conthrax-sb),
+    url("../assets/fonts/conthrax-sb.ttf") format("truetype");
+  font-display: swap;
+}
+.conthrax {
+  font-family: conthrax, sans-serif;
+}
+
+@font-face {
+  font-family: GROBOLD;
+  src: url("../assets/fonts/GROBOLD.ttf") format("truetype");
+  font-display: swap;
+}
+.grobold {
+  font-family: GROBOLD, sans-serif;
+}

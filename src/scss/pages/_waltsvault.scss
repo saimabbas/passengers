@@ -1,0 +1,148 @@
+.waltsvault {
+  width: 100%;
+  //   height: 130vh;
+  padding: 5rem;
+  background-color: #000000;
+  .waltsvaultmain {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 5rem;
+    background-color: #243f71;
+    .waltsvaultcontent {
+      z-index: 1001;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 3.3rem;
+        color: #fff;
+        font-weight: 500;
+        z-index: 1001;
+        text-transform: uppercase;
+      }
+      h4 {
+        font-size: 12rem;
+        color: #fff;
+        font-weight: 600;
+        z-index: 1001;
+        margin: 2rem 0;
+      }
+      h6 {
+        font-size: 3rem;
+        color: #fff;
+        font-weight: 500;
+        z-index: 1001;
+        text-transform: uppercase;
+      }
+      .waltsvaulttimer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin: 4rem 0;
+        .wvdays {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 31%;
+          .wvdcount {
+            span {
+              font-size: 6.2rem;
+              font-weight: 400;
+              color: #fff;
+            }
+          }
+          h6 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #fff;
+          }
+        }
+        p {
+          font-size: 3rem;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+      .waltsvaultinput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        p {
+          font-size: 2.2rem;
+          font-weight: 400;
+          color: #fff;
+          text-align: center;
+        }
+        .subscribe-form {
+          width: 100%;
+        }
+        .wvinputbox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin: 2rem 0;
+          input {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 70%;
+            padding: 1.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.5rem;
+            font-weight: 500;
+            background-color: rgba(255, 255, 255, 0.04);
+          }
+          input:focus {
+            outline: none;
+          }
+          input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.5rem;
+            font-weight: 500;
+          }
+          .wvinputbtn {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span {
+              font-size: 2.2rem;
+              font-weight: 400;
+              color: #fff;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .waltsvaulticons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        margin: 6rem 0 2rem 0;
+        svg {
+          width: 4rem;
+          color: rgba(255, 255, 255, 0.6);
+          margin-right: 1.5rem;
+        }
+      }
+    }
+    .backvideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

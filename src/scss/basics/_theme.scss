@@ -1,0 +1,123 @@
+.app.light-theme {
+  // Globals
+  --bg-color: #f8fcff;
+  --dark-blue-white: #1f194d;
+  --white-dark-blue: #fff;
+  --light-blue-btn-filled-color: #195bff;
+  --light-blue-btn-filled-bg: rgba(25, 90, 255, 0.15);
+  --round-chevron-box: #fff;
+  --round-chevron-box-home-hero: #fff;
+  --view-more-link-box: #eef4f6;
+  --user-details-p: #69697c;
+  --user-details-border: #d8d8d8;
+
+  //   Header
+  --header-links: #4d4d62;
+  --header-menu-mob: #fff;
+  --heder-logged-border: #d1e4ef;
+  --heder-img-border: #fff;
+
+  //   Footer
+  --footer-bg: #1553cb;
+  --footer-input-box: #2352a1;
+  --footer-links-color: #c0d0ee;
+
+  // Subscription
+  --soge-not-available: #a9a9bf;
+  --soge-available: #69697c;
+  --soge-not-available-icon: #d9d9e4;
+
+  // Vault
+  --vault-card-border-mob: #ededed;
+
+  // Coming Soon
+  --var-timer-bg: #1f194d;
+  --var-input-bor: #fff;
+  --var-input-bgc: #fff;
+
+  // Home
+  --hero-timer-bg: #1f194d;
+  --home-about-p: #1f194d;
+
+  // Prize Pools
+  --prizepools-card-bg: #fff;
+  --voting-closed-bg: #f7f6f2;
+  --voting-closed-color: #4d4d62;
+  --vo-option-border: #eeeeee;
+  --prizepools-prog-bg: #c0d0ee;
+  --prizepools-center-grid-card-bg: rgba(192, 208, 238, 0.1);
+  --prizepools-mob-acc-header-bg: #ecf1fa;
+
+  // Checkout
+  --checkout-card-bg: rgba(221, 221, 229, 0.25);
+
+  // How it Works
+  --var-btn-bgc: #efefef;
+  --var-text-btn: #807e8e;
+
+  // Roadmap
+
+  --roadmap-dot-bg: #e0e3ec;
+}
+
+.app.dark-theme {
+  // Globals
+  --bg-color: #1b1f31;
+  --dark-blue-white: #fff;
+  --white-dark-blue: #292a37;
+  --light-blue-btn-filled-color: #fff;
+  --light-blue-btn-filled-bg: rgba(255, 255, 255, 0.15);
+  --round-chevron-box: #292a37;
+  --round-chevron-box-home-hero: rgba(255, 255, 255, 0.15);
+  --view-more-link-box: #434855;
+  --user-details-p: #a3a3ab;
+  --user-details-border: #42464e;
+
+  //   Header
+  --header-links: #a3a3ab;
+  --header-menu-mob: #595677;
+  --heder-logged-border: #675fa7;
+  --heder-img-border: #444664;
+
+  //   Footer
+  --footer-bg: #3e4058;
+  --footer-input-box: #30334e;
+  --footer-links-color: #a3a3ab;
+
+  // Subscription
+  --soge-not-available: #69697c;
+  --soge-not-available-icon: #69697c;
+  --soge-available: #fff;
+
+  // Vault
+  --vault-card-border-mob: #42464e;
+
+  // Coming Soon
+  --var-timer-bg: #21274b;
+  --var-input-bor: #373e62;
+  --var-input-bgc: rgba(33, 39, 75, 0.29);
+
+  // Home
+  --hero-timer-bg: #353b57;
+  --home-about-p: rgba(255, 255, 255, 0.5);
+
+  // Prize Pools
+  --prizepools-card-bg: #3b3c4e;
+  --voting-closed-bg: rgba(255, 255, 255, 0.1);
+  --voting-closed-color: #848594;
+  --vo-option-border: #394359;
+  --prizepools-prog-bg: #8b8d9c;
+  --prizepools-center-grid-card-bg: rgba(192, 208, 238, 0.05);
+  --prizepools-mob-acc-header-bg: #3f4050;
+
+  // Checkout
+  --checkout-card-bg: #38394b;
+
+  // How it Works
+  --var-btn-bgc: rgba(239, 239, 239, 0.1);
+  --var-text-btn: #ffffff;
+
+  // Roadmap
+
+  --roadmap-dot-bg: #51536a;
+}

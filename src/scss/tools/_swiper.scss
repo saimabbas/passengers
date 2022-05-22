@@ -1,0 +1,28 @@
+.hero-swiper-box {
+  .swiper-slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: var(--dark-blue-white);
+    opacity: 0.25;
+    margin: 1rem 0 !important;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--dark-blue-white);
+    opacity: 1;
+  }
+
+  .swiper-pagination-vertical.swiper-pagination-bullets,
+  .swiper-vertical > .swiper-pagination-bullets {
+    position: absolute !important;
+    top: 50% !important;
+    right: 0 !important;
+    left: unset !important;
+    bottom: unset !important;
+    transform: translate(0, -50%) !important;
+  }
+}

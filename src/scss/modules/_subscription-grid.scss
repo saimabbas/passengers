@@ -1,0 +1,108 @@
+.subscribe-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 3.5rem;
+  .subscribe-grid-card {
+    width: 100%;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    transition: 0.75s;
+    position: relative;
+    z-index: 5;
+    background-color: var(--round-chevron-box);
+    button.light-blue-btn-filled {
+      transition: 0.75s !important;
+    }
+    &:hover {
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      button.light-blue-btn-filled {
+        color: #fff !important;
+        background-color: #195bff !important;
+      }
+    }
+    h3 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      color: var(--dark-blue-white);
+      padding: 2.5rem 0 0 0;
+      width: 100%;
+      text-align: center;
+    }
+    h4 {
+      font-size: 3.25rem;
+      line-height: 3.25rem;
+      font-weight: 800;
+      color: var(--dark-blue-white);
+      padding: 2.5rem 0;
+      margin: 2.5rem 0;
+      width: 100%;
+      text-align: center;
+      background-color: var(--view-more-link-box);
+    }
+    .subscribe-options-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-gap: 1.5rem;
+      .subscribe-options-grid-entry {
+        width: 100%;
+        display: inline-flex;
+        align-items: flex-start;
+        padding: 0 3.5rem;
+        svg {
+          width: max-content;
+          height: 1.25rem;
+          margin: 0.85rem 1rem 0 0;
+        }
+        p {
+          font-size: 1.5rem;
+          width: 75%;
+          color: var(--soge-available);
+        }
+      }
+    }
+
+    .subscribe-btn-box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5rem 0;
+      button {
+        width: calc(100% - 7rem);
+        padding: 2.25rem 0;
+      }
+    }
+  }
+}
+.soge-not-available {
+  p {
+    color: var(--soge-not-available) !important;
+  }
+  svg path {
+    stroke: var(--soge-not-available-icon) !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .subscribe-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .subscribe-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 3.5rem;
+  }
+}

@@ -1,0 +1,169 @@
+.letushelp-grid {
+  .accordion-body {
+    padding: 1.5rem 0 0 0;
+  }
+
+  .accordion-item {
+    border-radius: 1.5rem !important;
+    border: 0 !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
+    padding: 2.75rem;
+    background-color: unset !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: unset;
+    box-shadow: unset !important;
+    border: 0 !important;
+    background-color: unset !important;
+    padding: 0;
+
+    svg {
+      transform: rotate(0);
+    }
+  }
+
+  .accordion-button::after {
+    display: none !important;
+  }
+
+  .accordion-button:focus {
+    border: 0 !important;
+    box-shadow: unset !important;
+  }
+
+  .accordion-button {
+    padding: 0;
+    background-color: unset !important;
+  }
+
+  .faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h5 {
+      font-size: 1.85rem;
+      color: var(--dark-blue-white);
+      font-weight: 700;
+      width: 85%;
+    }
+
+    svg {
+      width: max-content;
+      height: 0.85rem;
+      transform: rotate(180deg);
+      transition: 0.35s;
+    }
+  }
+
+  .faq-a {
+    width: 100%;
+
+    p {
+      font-size: 1.65rem;
+      color: var(--user-details-p);
+
+      a {
+        color: #195bff;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-mob,
+.voting-open-mob-acc,
+.checkoutright-mob {
+  .accordion-body {
+    padding: 0;
+  }
+
+  .accordion-item {
+    border-radius: 0 !important;
+    border: 0 !important;
+    padding: 0;
+    background-color: unset !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: unset;
+    box-shadow: unset !important;
+    border: 0 !important;
+    background-color: unset !important;
+    padding: 0;
+
+    svg {
+      transform: rotate(0) !important;
+    }
+  }
+
+  .accordion-button {
+    background-color: unset !important;
+  }
+
+  .accordion-button::after {
+    display: none !important;
+  }
+
+  .accordion-button:focus {
+    border: 0 !important;
+    box-shadow: unset !important;
+  }
+
+  .accordion-button {
+    padding: 0;
+  }
+}
+.logged-in-box {
+  .btn-primary {
+    background-color: unset;
+    border: 0;
+    padding: 0;
+    width: max-content;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: unset !important;
+      box-shadow: none !important;
+    }
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .btn-check:active + .btn-primary,
+  .btn-check:checked + .btn-primary,
+  .btn-primary.active,
+  .btn-primary:active,
+  .show > .btn-primary.dropdown-toggle {
+    background-color: unset !important;
+  }
+  .dropdown-menu {
+    padding: 0 !important;
+    background-color: unset !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    right: 0 !important;
+  }
+  .dropdown,
+  .dropend,
+  .dropstart,
+  .dropup {
+    position: unset;
+  }
+}
+@media screen and (max-width: 650px) {
+  .letushelp-grid .faq-q {
+    width: 95%;
+
+    h5 {
+      width: 93%;
+    }
+  }
+
+  .letushelp-grid .accordion-item {
+    padding: 1.25rem;
+  }
+}
