@@ -3,11 +3,20 @@ import Passengers from "./../assets/img/passenger.png";
 import Instagram from "../assets/icons/Instagram";
 import TwitterIcon from "../assets/icons/TwitterIcon";
 import Discord from "../assets/icons/Discord";
+// import HeroBgDark from "./../assets/img/pl.png";
 import ComingVideo from "../assets/videos/comingsoon.mp4";
 import StarsVideo from "../assets/videos/stars.mp4";
 import BackAudio from "../assets/audio/back-ad.mpeg";
 import { gsap } from "gsap";
+import Moon from "../assets/img/moon.png";
+import Cloud1Light from "./../assets/img/cloud-1.png";
+import Cloud1Dark from "./../assets/img/cloud-1-dark.png";
+import Cloud2Light from "./../assets/img/cloud-2.png";
+import Cloud2Dark from "./../assets/img/cloud-2-dark.png";
+import Cloud3Light from "./../assets/img/cloud-3.png";
+import Cloud3Dark from "./../assets/img/cloud-3-dark.png";
 import $ from "jquery";
+import { FaRocket } from "react-icons/fa";
 import { SpinnerCircularFixed, SpinnerCircular } from "spinners-react";
 import { subscribeToComingSoonII } from "../HTTP/endpoints";
 import { toast } from "react-toastify";
@@ -48,7 +57,7 @@ const ComingSoonDark = () => {
   };
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    let difference = +new Date(`06/21/${year}`) - +new Date();
+    let difference = +new Date(`07/23/${year}`) - +new Date();
 
     let timeLeft = {};
 
