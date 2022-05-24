@@ -1,16 +1,52 @@
 .passengerpage {
   width: 100%;
   padding: 5rem;
-  background-color: #000000;
+  background-color: #243f71;
+  .back-audio {
+    display: none;
+  }
   .passengermain {
     width: 100%;
     position: relative;
-    background-color: #243f71;
+    overflow: hidden;
+    .passengersmain-content {
+      position: relative;
+      width: 100%;
+      z-index: 500;
+    }
+    .passengers-bg {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      z-index: 99;
+      height: 100%;
+    }
+    .passengers-header-bg {
+      width: 80%;
+      height: max-content;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      z-index: 99;
+    }
+    .passengers-header-mob-bg {
+      display: none;
+    }
     .passengersheaderhero {
       width: 100%;
-      height: 100vh;
+      min-height: 135vh;
       position: relative;
-      background-color: #243f71;
+      .passengers-hero-mountains {
+        width: 100%;
+        height: max-content;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 50;
+      }
       .passengerheader {
         width: 100%;
         height: 12.5rem;
@@ -67,6 +103,8 @@
             background: rgba(255, 255, 255, 0.1);
             width: 20%;
             height: 3.5rem;
+            padding: 0.5rem;
+            backdrop-filter: blur(3px);
             button {
               display: flex;
               justify-content: center;
@@ -75,13 +113,18 @@
               border-radius: 50%;
               background-color: transparent;
               border: none;
-              height: 100%;
+              height: 3rem;
+              height: 3rem;
+              transition: 0 !important;
               svg {
                 width: 100%;
               }
             }
-            button:hover {
+            button.passengers-audio-active-btn {
               background-color: #fff;
+              svg path {
+                stroke: #000 !important;
+              }
             }
           }
           .passengerscomingsoon {
@@ -89,6 +132,7 @@
             justify-content: center;
             align-items: center;
             width: 50%;
+            backdrop-filter: blur(3px);
             padding: 1.5rem 0;
             color: #fff;
             background: linear-gradient(
@@ -97,9 +141,12 @@
               rgba(255, 255, 255, 0.2) 100%
             );
             border: unset;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 400;
             margin: 0 0 0 2rem;
+          }
+          b {
+            margin: 0 0 0 0.25rem;
           }
         }
       }
@@ -111,7 +158,7 @@
         width: 100%;
         padding: 22.5rem 0 0 0;
         h3 {
-          font-size: 10.5rem;
+          font-size: 8.5rem;
           color: #fff;
           font-weight: 500;
           letter-spacing: 8px;
@@ -128,26 +175,31 @@
             justify-content: center;
             align-items: center;
             background: rgba(255, 255, 255, 0.1);
-            max-width: 4rem;
-            max-height: 4rem;
-            min-width: 4rem;
-            min-height: 4rem;
+            max-width: 4.5rem;
+            max-height: 4.5rem;
+            min-width: 4.5rem;
+            min-height: 4.5rem;
             border-radius: 50%;
             margin: 0 0 0 1rem;
             cursor: pointer;
             svg {
-              max-width: 1.75rem;
+              width: 2rem;
               color: #fff;
             }
           }
           .pibox:hover {
             background: #fff;
+            svg {
+              fill: #000 !important;
+              path {
+                fill: #000 !important;
+              }
+            }
           }
         }
       }
     }
     .passengersswiper {
-      background-color: #243f71;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -168,6 +220,7 @@
           width: 100%;
           height: 100%;
           img {
+            width: 100%;
             border-radius: 1rem;
             border: 1px solid rgba(255, 255, 255, 0.6);
           }
@@ -175,7 +228,6 @@
       }
     }
     .passengersteam {
-      background-color: #243f71;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -216,7 +268,7 @@
             font-size: 1.55rem;
             color: #fff;
             font-weight: 500;
-            margin: 2rem 0 0 0;
+            margin: 1.5rem 0 0 0;
             text-transform: uppercase;
           }
         }
@@ -227,15 +279,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #243f71;
       width: 100%;
       padding: 10rem 0 0 0;
-      p {
+      h3 {
         font-size: 3rem;
         color: #fff;
         font-weight: 400;
         text-transform: uppercase;
-        margin: 0 0 3rem 0;
+        margin: 0 0 4rem 0;
+        text-align: center;
       }
       .pfaqbox {
         display: flex;
@@ -243,67 +295,11 @@
         align-items: center;
         width: 85%;
         flex-direction: column;
-        .firstpassfaq {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .accordion {
           width: 100%;
-          flex-direction: column;
-          .fpfquest {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 2rem 4rem;
-            background: #09062c;
-            transform: skew(-20deg, 0deg);
-            margin: 0 0 2rem 0;
-            border-bottom: 0.5px solid #fff;
-            .fpfqleft {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              width: 70%;
-              span {
-                color: #fff;
-                font-weight: 500;
-                font-size: 2.5rem;
-                margin: 0 6rem 0 0;
-              }
-              p {
-                font-size: 1.85rem;
-                color: #fff;
-                font-weight: 400;
-                text-transform: uppercase;
-                margin: 0 !important;
-              }
-            }
-            .fpfqright {
-              display: flex;
-              justify-content: flex-end;
-              align-items: center;
-              svg {
-                color: #fff;
-                font-size: 4rem;
-              }
-            }
-          }
-          .fpfans {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 2rem 4rem;
-            background: #09062c;
-            transform: skew(-15deg, 0deg);
-            margin: 0 0 2rem 0;
-            h6 {
-              font-size: 1.6rem;
-              font-weight: 300;
-              color: #fff;
-              text-transform: normal;
-            }
-          }
+        }
+        .accordion-item {
+          margin: 0 0 3.5rem 0;
         }
       }
     }
@@ -313,7 +309,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      padding: 10rem 0;
+      padding: 10rem 0 35rem 0;
       h6 {
         font-size: 3rem;
         color: #fff;
@@ -357,5 +353,548 @@
         }
       }
     }
+  }
+}
+
+.planet-1 {
+  width: 60rem;
+  height: max-content;
+  object-fit: contain;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translate(60%, -50%);
+  z-index: 100;
+}
+
+.passengers-section-heading {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+.proadmap-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5rem 0 0 0;
+  padding: 5rem 0 10rem 0;
+}
+.passengers-roadmap {
+  width: 100%;
+  margin: 7.5rem 0 0 0;
+}
+.proadmap-center-line-box {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1px;
+  background-color: #fff;
+  .proadmap-center-line-box-top {
+    width: max-content;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(1) {
+      width: 4.5rem;
+      height: 1px;
+      background-color: #fff;
+    }
+    & > div:nth-child(2) {
+      width: 2.5rem;
+      height: 1px;
+      background-color: #fff;
+      margin: 0.75rem 0 0 0;
+    }
+  }
+  .proadmap-center-line-box-bottom {
+    width: max-content;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(1) {
+      width: 2.5rem;
+      height: 1px;
+      background-color: #fff;
+      margin: 0 0 0.75rem 0;
+    }
+    & > div:nth-child(2) {
+      width: 4.5rem;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+}
+.proadmap-box {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  .proadmap-box-number {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5rem 0 0;
+    span {
+      font-size: 18.5rem;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+      font-family: conthrax, sans-serif;
+    }
+  }
+  .proadmap-box-text-con {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+      width: 5rem;
+      height: 1px;
+      background-color: #fff;
+      display: block;
+    }
+    .proadmap-box-text-con-box {
+      position: relative;
+      width: max-content;
+      img {
+        width: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+      }
+      h4 {
+        font-size: 2.5rem;
+        color: #01fbc2;
+        margin: 0 0 0.5rem 0;
+        z-index: 55;
+        position: relative;
+      }
+      p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+        z-index: 55;
+        position: relative;
+      }
+    }
+  }
+}
+.proadmap-box-left {
+  .proadmap-box-number {
+    justify-content: flex-end;
+    padding: 0 5rem 0 0;
+  }
+}
+.proadmap-box-right {
+  .proadmap-box-number {
+    justify-content: flex-start;
+    padding: 0 0 0 5rem;
+  }
+}
+.proadmap-box-1,
+.proadmap-box-3,
+.proadmap-box-5,
+.proadmap-box-7,
+.proadmap-box-9,
+.proadmap-box-11,
+.proadmap-box-13,
+.proadmap-box-15,
+.proadmap-box-17 {
+  .proadmap-box-text-con-box {
+    padding: 5rem 5rem 5rem 2.5rem;
+  }
+}
+.proadmap-box-2,
+.proadmap-box-4,
+.proadmap-box-6,
+.proadmap-box-8,
+.proadmap-box-10,
+.proadmap-box-12,
+.proadmap-box-14,
+.proadmap-box-16 {
+  .proadmap-box-text-con-box {
+    padding: 7.5rem 1.5rem 1.5rem 7.5rem;
+  }
+}
+.passengers-footer-bg {
+  width: 100%;
+  height: max-content;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+}
+
+.fpfquest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 4rem;
+  background: #09062c;
+  transform: skew(-15deg, 0deg);
+  border-bottom: 0.5px solid #fff;
+  .fpfqleft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 95%;
+    transform: skew(15deg, 0deg);
+    span {
+      color: #fff;
+      font-weight: 500;
+      font-size: 2.5rem;
+      margin: 0 5rem 0 0;
+      font-family: conthrax, sans-serif;
+    }
+    p {
+      font-size: 1.75rem;
+      color: #fff;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 !important;
+      font-family: conthrax, sans-serif;
+    }
+  }
+  .fpfqright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transform: skew(15deg, 0deg);
+    svg {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+  }
+}
+.fpfans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 4rem;
+  background: #09062c;
+  transform: skew(-15deg, 0deg);
+  margin: 1.5rem 0 0 0;
+  h6 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: #fff;
+    text-transform: normal;
+    transform: skew(15deg, 0deg);
+  }
+}
+.passengersheadermob {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    ul
+    li {
+    margin: 0 4rem 0 0;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    ul
+    li {
+    margin: 0 1.5rem 0 0;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    ul
+    li.faqnomarg {
+    margin: 0;
+  }
+  .passengerpage .passengermain .passengersheaderhero .passengerheader {
+    height: 10.5rem;
+    padding: 0 3rem;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    ul {
+    margin: 0 0 0 4rem;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    ul
+    li
+    a {
+    font-size: 1.45rem;
+  }
+  .passengerpage {
+    padding: 3.5rem;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    img {
+    width: 25%;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderright
+    .volumeicons {
+    width: 30%;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderright
+    .passengerscomingsoon {
+    width: 60%;
+    margin: 0 0 0 1rem;
+    padding: 1.25rem 0;
+  }
+  .passengerpage .passengermain .passengersteam .passengersteamgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 95%;
+  }
+  .passengerpage .passengermain .passengersfaq .pfaqbox {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .passengerpage .passengermain .passengersheaderhero {
+    min-height: 100vh;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    ul {
+    display: none;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderright
+    .passengerscomingsoon {
+    display: none;
+  }
+  .passengerpage .passengermain .passengersheaderhero .passengerheader {
+    height: 7.5rem;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    img {
+    width: 40%;
+  }
+  .passengersheaderhero .passengerheader .passengerheaderright .volumeicons {
+    width: 45% !important;
+  }
+  .passengersheadermob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    max-height: 4.5rem;
+    max-width: 4.5rem;
+    box-shadow: 0px 16px 34px -9px rgba(0, 76, 172, 0.61);
+    color: #fff;
+    margin: 0 0 0 1.5rem;
+    svg {
+      width: 2.75rem;
+      height: max-content;
+      color: #fff;
+    }
+  }
+  .passengerpage .passengermain .passengersheaderhero .passengershero h3 {
+    font-size: 6.25rem;
+  }
+  .proadmap-center-line-box {
+    display: none;
+  }
+  .proadmap-box {
+    flex-direction: column;
+  }
+  .proadmap-box .proadmap-box-text-con span {
+    display: none;
+  }
+  .proadmap-box .proadmap-box-text-con .proadmap-box-text-con-box img {
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+  .proadmap-box .proadmap-box-text-con {
+    width: 75%;
+  }
+  .proadmap-container {
+    margin: 0;
+    padding: 2rem 0 5rem 0;
+  }
+  .proadmap-box-1 .proadmap-box-text-con-box {
+    padding: 5rem 8rem 5rem 2.5rem;
+  }
+  .proadmap-box-left .proadmap-box-number {
+    padding: 0;
+    justify-content: center;
+  }
+  .proadmap-box.proadmap-box-right {
+    flex-direction: column-reverse;
+  }
+  .proadmap-box-right .proadmap-box-number {
+    padding: 0;
+    justify-content: center;
+  }
+  .passengerpage .passengermain .passengersteam .passengersteamgrid {
+    grid-gap: 3rem 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .fpfquest {
+    padding: 2rem;
+  }
+  .fpfquest .fpfqleft p {
+    font-size: 1.45rem;
+  }
+  .fpfquest .fpfqleft span {
+    font-size: 2.25rem;
+    margin: 0 3rem 0 0;
+  }
+  .fpfans h6 {
+    font-size: 1.55rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .passengerpage {
+    padding: 0;
+  }
+  .passengers-header-bg {
+    display: none;
+  }
+  .passengerpage .passengermain .passengers-header-mob-bg {
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    z-index: 99;
+    display: block;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderleft
+    img {
+    width: 75%;
+  }
+  .passengerpage
+    .passengermain
+    .passengersheaderhero
+    .passengerheader
+    .passengerheaderright
+    .volumeicons {
+    display: none;
+  }
+  .passengerpage .passengermain .passengersheaderhero {
+    min-height: 70vh;
+  }
+  .passengerpage .passengermain .passengersheaderhero .passengershero h3 {
+    font-size: 2.5rem;
+  }
+  .proadmap-box-1 .proadmap-box-text-con-box {
+    padding: 7rem 2rem 5rem 2.5rem;
+  }
+  .proadmap-box .proadmap-box-text-con {
+    width: 74%;
+  }
+  .passengerpage
+    .passengermain
+    .passengersteam
+    .passengersteamgrid
+    .ptgmainbox
+    img {
+    width: 100%;
+    height: 100%;
+  }
+  .passengerpage .passengermain .passengersteam .passengersteamgrid {
+    width: 100%;
+    grid-gap: 3rem 2rem;
+  }
+  .passengerpage .passengermain .passengersaboutus .passaboutusbtn {
+    width: 100%;
+    flex-direction: column;
+    button {
+      width: 60%;
+      margin: 0 0 4rem 0;
+      padding: 2.15rem 1.5rem;
+      svg {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+    }
+  }
+  .passengerpage .passengermain .passengersaboutus p {
+    font-size: 1.65rem;
+    br {
+      display: none;
+    }
+  }
+  .fpfquest .fpfqleft p {
+    font-size: 1rem;
+  }
+  .fpfquest .fpfqleft span {
+    font-size: 1.75rem;
+    margin: 0 1.5rem 0 0;
+  }
+  .fpfans h6 {
+    font-size: 1.25rem;
   }
 }
