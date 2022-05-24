@@ -5,7 +5,7 @@ import TwitterIcon from "../assets/icons/TwitterIcon";
 import Discord from "../assets/icons/Discord";
 // import HeroBgDark from "./../assets/img/pl.png";
 import ComingVideo from "../assets/videos/comingsoon.mp4";
-import StarsVideo from "../assets/videos/stars (1).mp4";
+import StarsVideo from "../assets/videos/trimmed (1).mp4";
 import BackAudio from "../assets/audio/back-ad.mpeg";
 import { gsap } from "gsap";
 import Moon from "../assets/img/moon.png";
