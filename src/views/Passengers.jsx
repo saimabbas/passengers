@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Logo from "./../assets/img/Passengers.png";
 import Mute from "../assets/icons/Mute";
 import UnMute from "../assets/icons/UnMute";
@@ -15,14 +15,34 @@ import PassengerSwiperImg from "../assets/img/passengersswiper.png";
 import PassengersBg from "../assets/img/passengers-bg.png";
 import PassengersFooterBg from "../assets/img/passengers-bottom-bg-img.png";
 import PassengersHeaderBg from "../assets/img/passengers-header-bg.png";
+import Planet1 from "../assets/img/Planets/planet-1.svg";
+import Planet2 from "../assets/img/Planets/planet-2.svg";
+import Planet3 from "../assets/img/Planets/planet-3.svg";
+import Planet4 from "../assets/img/Planets/planet-4.svg";
+import Planet5 from "../assets/img/Planets/planet-5.svg";
+import Planet6 from "../assets/img/Planets/planet-6.svg";
+import Planet7 from "../assets/img/Planets/planet-7.svg";
+import Planet8 from "../assets/img/Planets/planet-8.svg";
+import Planet9 from "../assets/img/Planets/planet-9.svg";
+import Planet10 from "../assets/img/Planets/planet-10.svg";
+import missile from "../assets/img/Planets/missile.svg";
 import PassengersHeaderMobBg from "../assets/img/passengermobheader.png";
 import PassengersHeroMountains from "../assets/img/passengers-hero-mountains.png";
-// import PBG1 from "../assets/img/PRoadmap/proadmap-box-bg-1.png";
-// import PBG2 from "../assets/img/PRoadmap/proadmap-box-bg-2.png";
 import PassengerTeam from "../assets/img/passengersteam.png";
 import { MdExpandMore } from "react-icons/md";
 import Menu from "../assets/icons/Menu";
-
+import { gsap } from "gsap";
+import {
+  Power1,
+  Power2,
+  Power3,
+  Power4,
+  Linear,
+  Back,
+  Expo,
+  Circ,
+} from "gsap/dist/gsap";
+import { SplitText } from "gsap/SplitText";
 const Passengers = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const ad = useRef();
@@ -34,9 +54,198 @@ const Passengers = () => {
     setIsAudioPlaying(true);
     ad.current.play();
   };
+
+  useEffect(() => {
+    const passengersHeading = new SplitText(".passengers-heading", {
+      type: "chars",
+    });
+    const passengersHeadingChars = passengersHeading.chars;
+
+    let PLandingAnim = gsap.timeline();
+    PLandingAnim.fromTo(
+      ".pcircle-box",
+      {
+        transform: "translate(-100%, -50%)",
+      },
+      {
+        transform: "translate(100%, -50%)",
+        duration: 5,
+      }
+    )
+      .fromTo(
+        ".pcircle-box",
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+          duration: 0.25,
+        },
+        "<0.85"
+      )
+      .fromTo(
+        ".passengers-loading-screen",
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+          duration: 0.25,
+        },
+        "<0.25"
+      )
+      /* .fromTo(
+        ".passengers-loading-screen",
+        {
+          transform: "translate(0%, 0)",
+        },
+        {
+          transform: "translate(200%, 0)",
+          duration: 0.01,
+        }
+      ) */
+      .fromTo(
+        passengersHeadingChars,
+        {
+          y: 100,
+        },
+        {
+          y: 0,
+          duration: 1,
+        },
+        "<0"
+      )
+      .fromTo(
+        passengersHeadingChars,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        },
+        "<0"
+      )
+      .fromTo(
+        ".passengers-header-bg",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.75,
+          repeat: 2,
+        },
+        "<0"
+      )
+      .fromTo(
+        ".volumeicons",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.75,
+          repeat: 1,
+        },
+        "<0"
+      )
+      .fromTo(
+        ".passengers-hero-planet-left",
+        {
+          transform: "translate(-100%, 0)",
+        },
+        {
+          transform: "translate(-50%, 0)",
+          duration: 0.75,
+        },
+        "<0"
+      )
+      .fromTo(
+        ".passengers-hero-planet-right",
+        {
+          transform: "translate(100%, 0)",
+        },
+        {
+          transform: "translate(50%, 0)",
+          duration: 0.75,
+        },
+        "<0"
+      )
+      .fromTo(
+        ".passengerscomingsoon",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.75,
+          repeat: 1,
+        },
+        "<0.15"
+      )
+      .fromTo(
+        ".passengers-hero-mountains",
+        {
+          opacity: 0,
+          y: "100%",
+        },
+        {
+          opacity: 1,
+          y: "0",
+          duration: 0.75,
+        },
+        "<0.25"
+      )
+      .fromTo(
+        ".passengerheaderleft > img",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.75,
+          repeat: 2,
+        },
+        "<0.25"
+      )
+      .fromTo(
+        ".passengersicons .pibox",
+        {
+          opacity: 0,
+          y: "5rem",
+        },
+        {
+          opacity: 1,
+          y: "0",
+          duration: 0.5,
+          stagger: {
+            each: 0.05,
+          },
+        },
+        "<0.25"
+      );
+  }, []);
+
   return (
     <div className="app light-theme">
       <div className="passengerpage">
+        <div className="passengers-loading-screen">
+          <div className="pcircle">
+            <div className="pcircle-box">
+              <div className="pcircle-dark-1"></div>
+              <div className="pcircle-light-1"></div>
+              <div className="pcircle-dark-2"></div>
+              <div className="pcircle-light-2"></div>
+              <div className="pcircle-dark-3"></div>
+            </div>
+          </div>
+        </div>
         <div className="passengermain">
           <img
             className="passengers-bg"
@@ -64,6 +273,16 @@ const Passengers = () => {
                 className="passengers-hero-mountains"
                 src={PassengersHeroMountains}
                 alt="PassengersHeroMountains"
+              />
+              <img
+                className="passengers-hero-planet-left"
+                src={Planet6}
+                alt="PassengersBg"
+              />
+              <img
+                className="passengers-hero-planet-right"
+                src={Planet3}
+                alt="PassengersBg"
               />
               {/* <img className="planet-1" src={Planet3} alt="Planet1" /> */}
               <header className="passengerheader">
@@ -105,7 +324,6 @@ const Passengers = () => {
                 <div className="passengerheaderright">
                   <div className="volumeicons">
                     <audio ref={ad} className="back-audio" src={BackAudio} />
-
                     {isAudioPlaying ? (
                       <button onClick={pauseAudio}>
                         <Mute color="#fff" />
@@ -142,7 +360,7 @@ const Passengers = () => {
               </header>
               <div className="box">
                 <div className="passengershero">
-                  <h3 className="conthrax">Passengers</h3>
+                  <h3 className="conthrax passengers-heading">Passengers</h3>
                   <div className="passengersicons">
                     <div className="pibox">
                       <Discord color="#fff" />

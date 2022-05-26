@@ -1,7 +1,33 @@
 .passengerpage {
   width: 100%;
-  padding: 5rem;
   background-color: #243f71;
+  .passengers-hero-planet-left {
+    width: 25rem;
+    object-fit: contain;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translate(-50%, 0%);
+    z-index: 49;
+  }
+  .passengers-hero-planet-right {
+    width: 50rem;
+    object-fit: contain;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    transform: translate(50%, 0%);
+    z-index: 49;
+  }
+  .passengers-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 99;
+    height: 100%;
+  }
   .back-audio {
     display: none;
   }
@@ -9,19 +35,11 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    z-index: 1000;
     .passengersmain-content {
       position: relative;
       width: 100%;
       z-index: 500;
-    }
-    .passengers-bg {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      z-index: 99;
-      height: 100%;
     }
     .passengers-header-bg {
       width: 80%;
@@ -37,7 +55,7 @@
     }
     .passengersheaderhero {
       width: 100%;
-      min-height: 135vh;
+      min-height: 145vh;
       position: relative;
       .passengers-hero-mountains {
         width: 100%;
@@ -163,6 +181,9 @@
           font-weight: 500;
           letter-spacing: 8px;
           text-transform: uppercase;
+          * {
+            font-family: conthrax, sans-serif;
+          }
         }
         .passengersicons {
           display: flex;
@@ -355,7 +376,50 @@
     }
   }
 }
-
+.passengers-loading-screen {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #09062c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.pcircle {
+  width: 4.25rem;
+  height: 4.25rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  .pcircle-dark-1,
+  .pcircle-dark-2,
+  .pcircle-dark-3 {
+    min-width: 4rem;
+    min-height: 4rem;
+    background-color: #09062c;
+    border-radius: 50%;
+  }
+  .pcircle-light-1,
+  .pcircle-light-2 {
+    min-width: 4rem;
+    min-height: 4rem;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+  .pcircle-box {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+  }
+}
 .planet-1 {
   width: 60rem;
   height: max-content;

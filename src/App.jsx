@@ -36,6 +36,7 @@ const App = () => {
             <Switch>
               <Routes>
                 <Route path="/passengers" element={<ComingSoonDark />} />
+                <Route path="/passengershomepage" element={<Passengers />} />
               </Routes>
             </Switch>
           </div>
@@ -59,6 +60,7 @@ const App = () => {
             <Switch>
               <Routes>
                 <Route path="/passengers" element={<ComingSoonDark />} />
+                <Route path="/passengershomepage" element={<Passengers />} />
               </Routes>
             </Switch>
           </div>
