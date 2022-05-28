@@ -32,6 +32,7 @@ import PassengerTeam from "../assets/img/passengersteam.png";
 import { MdExpandMore } from "react-icons/md";
 import Menu from "../assets/icons/Menu";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   Power1,
   Power2,
@@ -44,6 +45,7 @@ import {
 } from "gsap/dist/gsap";
 import { SplitText } from "gsap/SplitText";
 const Passengers = () => {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const ad = useRef();
   const pauseAudio = () => {
@@ -61,6 +63,226 @@ const Passengers = () => {
     });
     const passengersHeadingChars = passengersHeading.chars;
 
+    const roadmapSH = new SplitText(".roadmap-sh", {
+      type: "chars",
+    });
+    const roadmapSHChars = roadmapSH.chars;
+    const sneakPeekSh = new SplitText(".sneak-peek-sh", {
+      type: "chars",
+    });
+    const sneakPeekShChars = sneakPeekSh.chars;
+    const teamSh = new SplitText(".team-sh", {
+      type: "chars",
+    });
+    const teamShChars = teamSh.chars;
+    const faqSh = new SplitText(".faq-sh", {
+      type: "chars",
+    });
+    const faqShChars = faqSh.chars;
+    const aboutSH = new SplitText(".about-sh", {
+      type: "chars",
+    });
+    const aboutSHChars = aboutSH.chars;
+    const aboutP = new SplitText(".passengersaboutus p", {
+      type: "lines",
+    });
+    const aboutPLines = aboutP.lines;
+
+    var roadmapSHANim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".passengers-roadmap",
+        start: "top 95%",
+      },
+    });
+    roadmapSHANim.fromTo(
+      roadmapSHChars,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.35,
+        stagger: {
+          repeat: 2,
+          each: 0.05,
+          from: "random",
+        },
+      }
+    );
+    var sneakPeekSH = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".sneak-peek-sh",
+        start: "top 95%",
+      },
+    });
+    sneakPeekSH
+      .fromTo(
+        sneakPeekShChars,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        }
+      )
+      .fromTo(
+        ".passengerslide",
+        {
+          y: "100%",
+        },
+        {
+          y: 0,
+          ease: Back.easeInOut,
+          duration: 1,
+          stagger: {
+            repeat: 0,
+            each: 0.025,
+            from: "random",
+            yoyo: true,
+          },
+        },
+        "<0"
+      );
+
+    var teamAnim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".team-sh",
+        start: "top 95%",
+      },
+    });
+    teamAnim
+      .fromTo(
+        teamShChars,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        }
+      )
+      .fromTo(
+        ".ptgmainbox",
+        {
+          opacity: 0,
+          y: "100%",
+        },
+        {
+          opacity: 1,
+          y: "0%",
+          ease: Back.easeInOut,
+          duration: 1.5,
+          stagger: {
+            each: 0.025,
+            from: "random",
+            yoyo: true,
+          },
+        },
+        "<0"
+      );
+    var faqShAnim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".faq-sh",
+        start: "top 95%",
+      },
+    });
+    faqShAnim
+      .fromTo(
+        faqShChars,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        }
+      )
+      .fromTo(
+        ".fpfquest",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        },
+        "<0"
+      );
+    var aboutSHAnim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-sh",
+        start: "top 95%",
+      },
+    });
+    aboutSHAnim
+      .fromTo(
+        aboutSHChars,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        }
+      )
+      .fromTo(
+        aboutPLines,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        },
+        "<0"
+      )
+      .fromTo(
+        ".passaboutusbtn button",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.35,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        },
+        "<0"
+      );
     let PLandingAnim = gsap.timeline();
     PLandingAnim.fromTo(
       ".pcircle-box",
@@ -73,15 +295,15 @@ const Passengers = () => {
       }
     )
       .fromTo(
-        ".pcircle-box",
+        ".pcircle",
         {
           opacity: 1,
         },
         {
           opacity: 0,
-          duration: 0.25,
+          duration: 0.15,
         },
-        "<0.85"
+        "<0.9"
       )
       .fromTo(
         ".passengers-loading-screen",
@@ -90,30 +312,20 @@ const Passengers = () => {
         },
         {
           opacity: 0,
-          duration: 0.25,
+          duration: 1.5,
         },
         "<0.25"
       )
-      /* .fromTo(
-        ".passengers-loading-screen",
-        {
-          transform: "translate(0%, 0)",
-        },
-        {
-          transform: "translate(200%, 0)",
-          duration: 0.01,
-        }
-      ) */
       .fromTo(
         passengersHeadingChars,
         {
-          y: 100,
+          y: 150,
         },
         {
           y: 0,
-          duration: 1,
+          duration: 0.75,
         },
-        "<0"
+        "<0.5"
       )
       .fromTo(
         passengersHeadingChars,
@@ -178,18 +390,6 @@ const Passengers = () => {
         "<0"
       )
       .fromTo(
-        ".passengerscomingsoon",
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          duration: 0.75,
-          repeat: 1,
-        },
-        "<0.15"
-      )
-      .fromTo(
         ".passengers-hero-mountains",
         {
           opacity: 0,
@@ -200,7 +400,23 @@ const Passengers = () => {
           y: "0",
           duration: 0.75,
         },
-        "<0.25"
+        "<0"
+      )
+      .fromTo(
+        ".passengerheaderleft ul li",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.75,
+          stagger: {
+            repeat: 2,
+            each: 0.05,
+            from: "random",
+          },
+        },
+        "<0.15"
       )
       .fromTo(
         ".passengerheaderleft > img",
@@ -228,7 +444,29 @@ const Passengers = () => {
             each: 0.05,
           },
         },
-        "<0.25"
+        "<0"
+      )
+      .fromTo(
+        ".passengerscomingsoon",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.75,
+          repeat: 1,
+        },
+        "<0"
+      )
+      .fromTo(
+        ".passengers-loading-screen",
+        {
+          transform: "translate(0%, 0)",
+        },
+        {
+          transform: "translate(200%, 0)",
+          duration: 0.01,
+        }
       );
   }, []);
 
@@ -375,12 +613,13 @@ const Passengers = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="passengers-roadmap">
+            <div className="passengers-roadmap">
               <div className="box">
-                <h2 className="passengers-section-heading">
+                <h2 className="passengers-section-heading roadmap-sh">
                   ROADMAP AND UTILITY
                 </h2>
-                <div className="proadmap-container">
+                <h3 className="roadmap-comingsoon">- Coming Soon -</h3>
+                {/* <div className="proadmap-container">
                   <div className="proadmap-center-line-box">
                     <div className="proadmap-center-line-box-top">
                       <div></div>
@@ -612,10 +851,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-            </div> */}
-            <div className="passengersswiper">
+            </div>
+            <div className="passengersswiper sneak-peek-sh">
               <p>Passengers Sneak Peek</p>
 
               <div className="passengersmainswiper">
@@ -623,7 +862,7 @@ const Passengers = () => {
                   className="mySwiper"
                   spaceBetween={25}
                   modules={[FreeMode]}
-                  slidesPerView={4.5}
+                  slidesPerView={5.5}
                   centeredSlides={true}
                   loop={true}
                   freeMode={true}
@@ -684,7 +923,7 @@ const Passengers = () => {
             <div className="box">
               <div className="passengersteam">
                 <h6>Meet the</h6>
-                <h5>Passengers team</h5>
+                <h5 className="team-sh">Passengers team</h5>
                 <div className="passengersteamgrid">
                   <div className="ptgmainbox">
                     <img src={PassengerTeam} alt="" />
@@ -755,7 +994,7 @@ const Passengers = () => {
             </div>
             <div className="box">
               <div className="passengersfaq">
-                <h3>Frequently asked questions</h3>
+                <h3 className="faq-sh">Frequently asked questions</h3>
 
                 <div className="pfaqbox">
                   <Accordion>
@@ -857,7 +1096,7 @@ const Passengers = () => {
             </div>
             <div className="box">
               <div className="passengersaboutus">
-                <h6>About us</h6>
+                <h6 className="about-sh">About us</h6>
                 <p>
                   Passengers is and NFT collection made by lovers of space, for
                   lovers of space. The goal with Passengers is to give as much
