@@ -26,6 +26,8 @@ import Planet8 from "../assets/img/Planets/planet-8.svg";
 import Planet9 from "../assets/img/Planets/planet-9.svg";
 import Planet10 from "../assets/img/Planets/planet-10.svg";
 import missile from "../assets/img/Planets/missile.svg";
+import PBG1 from "../assets/img/proadmap-box-bg-1.png";
+import PBG2 from "../assets/img/proadmap-box-bg-2.png";
 import PassengersHeaderMobBg from "../assets/img/passengermobheader.png";
 import PassengersHeroMountains from "../assets/img/passengers-hero-mountains.png";
 import PassengerTeam from "../assets/img/passengersteam.png";
@@ -33,6 +35,7 @@ import { MdExpandMore } from "react-icons/md";
 import Menu from "../assets/icons/Menu";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import $ from "jquery";
 import {
   Power1,
   Power2,
@@ -56,7 +59,6 @@ const Passengers = () => {
     setIsAudioPlaying(true);
     ad.current.play();
   };
-
   useEffect(() => {
     const passengersHeading = new SplitText(".passengers-heading", {
       type: "chars",
@@ -468,6 +470,113 @@ const Passengers = () => {
           duration: 0.01,
         }
       );
+
+    const shArr = [
+      [
+        $("#roadmap-step-1 .proadmap-box-number span"),
+        $("#roadmap-step-1 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-2 .proadmap-box-number span"),
+        $("#roadmap-step-2 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-3 .proadmap-box-number span"),
+        $("#roadmap-step-3 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-4 .proadmap-box-number span"),
+        $("#roadmap-step-4 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-5 .proadmap-box-number span"),
+        $("#roadmap-step-5 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-6 .proadmap-box-number span"),
+        $("#roadmap-step-6 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-7 .proadmap-box-number span"),
+        $("#roadmap-step-7 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-8 .proadmap-box-number span"),
+        $("#roadmap-step-8 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-9 .proadmap-box-number span"),
+        $("#roadmap-step-9 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-10 .proadmap-box-number span"),
+        $("#roadmap-step-10 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-11 .proadmap-box-number span"),
+        $("#roadmap-step-11 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-12 .proadmap-box-number span"),
+        $("#roadmap-step-12 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-13 .proadmap-box-number span"),
+        $("#roadmap-step-13 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-14 .proadmap-box-number span"),
+        $("#roadmap-step-14 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-15 .proadmap-box-number span"),
+        $("#roadmap-step-15 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-16 .proadmap-box-number span"),
+        $("#roadmap-step-16 .proadmap-box-text-con-box"),
+      ],
+      [
+        $("#roadmap-step-17 .proadmap-box-number span"),
+        $("#roadmap-step-17 .proadmap-box-text-con-box"),
+      ],
+    ];
+
+    for (let i = 0; i < 17; i++) {
+      var sectionHeadingAnim = gsap.timeline({
+        scrollTrigger: {
+          trigger: shArr[i][0],
+          start: "top 80%",
+        },
+      });
+
+      sectionHeadingAnim
+        .fromTo(
+          shArr[i][0],
+          {
+            x: "5rem",
+            opacity: 0,
+          },
+          {
+            x: "0",
+            opacity: 1,
+            duration: 1,
+          }
+        )
+        .fromTo(
+          shArr[i][1],
+          {
+            x: "-5rem",
+            opacity: 0,
+          },
+          {
+            x: "0",
+            opacity: 1,
+            duration: 1,
+          },
+          "<0"
+        );
+    }
   }, []);
 
   return (
@@ -618,8 +727,7 @@ const Passengers = () => {
                 <h2 className="passengers-section-heading roadmap-sh">
                   ROADMAP AND UTILITY
                 </h2>
-                <h3 className="roadmap-comingsoon">- Coming Soon -</h3>
-                {/* <div className="proadmap-container">
+                <div className="proadmap-container">
                   <div className="proadmap-center-line-box">
                     <div className="proadmap-center-line-box-top">
                       <div></div>
@@ -630,7 +738,10 @@ const Passengers = () => {
                       <div></div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-1">
+                  <div
+                    className="proadmap-box proadmap-box-left proadmap-box-1"
+                    id="roadmap-step-1"
+                  >
                     <div className="proadmap-box-number">
                       <span>01</span>
                     </div>
@@ -643,7 +754,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-2">
+                  <div
+                    id="roadmap-step-2"
+                    className="proadmap-box proadmap-box-right proadmap-box-2"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -656,7 +770,10 @@ const Passengers = () => {
                       <span>02</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-3">
+                  <div
+                    id="roadmap-step-3"
+                    className="proadmap-box proadmap-box-left proadmap-box-3"
+                  >
                     <div className="proadmap-box-number">
                       <span>03</span>
                     </div>
@@ -669,7 +786,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-4">
+                  <div
+                    id="roadmap-step-4"
+                    className="proadmap-box proadmap-box-right proadmap-box-4"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -682,7 +802,10 @@ const Passengers = () => {
                       <span>04</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-5">
+                  <div
+                    id="roadmap-step-5"
+                    className="proadmap-box proadmap-box-left proadmap-box-5"
+                  >
                     <div className="proadmap-box-number">
                       <span>05</span>
                     </div>
@@ -695,7 +818,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-6">
+                  <div
+                    id="roadmap-step-6"
+                    className="proadmap-box proadmap-box-right proadmap-box-6"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -708,7 +834,10 @@ const Passengers = () => {
                       <span>06</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-7">
+                  <div
+                    id="roadmap-step-7"
+                    className="proadmap-box proadmap-box-left proadmap-box-7"
+                  >
                     <div className="proadmap-box-number">
                       <span>07</span>
                     </div>
@@ -721,7 +850,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-8">
+                  <div
+                    id="roadmap-step-8"
+                    className="proadmap-box proadmap-box-right proadmap-box-8"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -734,7 +866,10 @@ const Passengers = () => {
                       <span>08</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-9">
+                  <div
+                    id="roadmap-step-9"
+                    className="proadmap-box proadmap-box-left proadmap-box-9"
+                  >
                     <div className="proadmap-box-number">
                       <span>09</span>
                     </div>
@@ -747,7 +882,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-10">
+                  <div
+                    id="roadmap-step-10"
+                    className="proadmap-box proadmap-box-right proadmap-box-10"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -760,7 +898,10 @@ const Passengers = () => {
                       <span>10</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-11">
+                  <div
+                    id="roadmap-step-11"
+                    className="proadmap-box proadmap-box-left proadmap-box-11"
+                  >
                     <div className="proadmap-box-number">
                       <span>11</span>
                     </div>
@@ -773,7 +914,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-12">
+                  <div
+                    id="roadmap-step-12"
+                    className="proadmap-box proadmap-box-right proadmap-box-12"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -786,7 +930,10 @@ const Passengers = () => {
                       <span>12</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-13">
+                  <div
+                    id="roadmap-step-13"
+                    className="proadmap-box proadmap-box-left proadmap-box-13"
+                  >
                     <div className="proadmap-box-number">
                       <span>13</span>
                     </div>
@@ -799,7 +946,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-14">
+                  <div
+                    id="roadmap-step-14"
+                    className="proadmap-box proadmap-box-right proadmap-box-14"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -812,7 +962,10 @@ const Passengers = () => {
                       <span>14</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-15">
+                  <div
+                    id="roadmap-step-15"
+                    className="proadmap-box proadmap-box-left proadmap-box-15"
+                  >
                     <div className="proadmap-box-number">
                       <span>15</span>
                     </div>
@@ -825,7 +978,10 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-right proadmap-box-16">
+                  <div
+                    id="roadmap-step-16"
+                    className="proadmap-box proadmap-box-right proadmap-box-16"
+                  >
                     <div className="proadmap-box-text-con">
                       <div className="proadmap-box-text-con-box">
                         <img src={PBG2} alt="PBG1" />
@@ -838,7 +994,10 @@ const Passengers = () => {
                       <span>16</span>
                     </div>
                   </div>
-                  <div className="proadmap-box proadmap-box-left proadmap-box-17">
+                  <div
+                    id="roadmap-step-17"
+                    className="proadmap-box proadmap-box-left proadmap-box-17"
+                  >
                     <div className="proadmap-box-number">
                       <span>17</span>
                     </div>
@@ -851,7 +1010,7 @@ const Passengers = () => {
                       </div>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
             <div className="passengersswiper sneak-peek-sh">

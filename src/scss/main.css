@@ -7705,6 +7705,9 @@ h6 {
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
   font-family: conthrax, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .proadmap-box .proadmap-box-text-con {
